@@ -7,15 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    private let viewModel = PetitionsViewModel()
+    
+    private let tableView = UITableView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-        // Do any additional setup after loading the view.
+        
+        setupTableView()
+        loadData()
     }
-
-
 }
 
