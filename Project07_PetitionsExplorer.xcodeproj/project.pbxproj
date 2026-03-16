@@ -10,12 +10,14 @@
 		1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C8F72F6887D800F7DD58 /* AppDelegate.swift */; };
 		1130C9052F6887D800F7DD58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */; };
 		1130C91B2F68B22F00F7DD58 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C91A2F68B22F00F7DD58 /* Petition.swift */; };
+		1130C91D2F68B2BA00F7DD58 /* PetitionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1130C8F72F6887D800F7DD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1130C91A2F68B22F00F7DD58 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsResponse.swift; sourceTree = "<group>"; };
 		115DC4442F68851B006ABE04 /* Project07_PetitionsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project07_PetitionsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				1130C91A2F68B22F00F7DD58 /* Petition.swift */,
+				1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1130C91D2F68B2BA00F7DD58 /* PetitionsResponse.swift in Sources */,
 				1130C91B2F68B22F00F7DD58 /* Petition.swift in Sources */,
 				1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */,
 				1130C9052F6887D800F7DD58 /* SceneDelegate.swift in Sources */,
