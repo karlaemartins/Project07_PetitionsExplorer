@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C8F72F6887D800F7DD58 /* AppDelegate.swift */; };
+		1130C9052F6887D800F7DD58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1130C8F72F6887D800F7DD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		115DC4442F68851B006ABE04 /* Project07_PetitionsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project07_PetitionsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,9 +49,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1130C9072F68AD6200F7DD58 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1130C8F72F6887D800F7DD58 /* AppDelegate.swift */,
+				1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1130C9082F68AE7500F7DD58 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1130C9092F68AE8500F7DD58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1130C90A2F68AE8F00F7DD58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1130C90B2F68AE9500F7DD58 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		115DC43B2F68851B006ABE04 = {
 			isa = PBXGroup;
 			children = (
+				1130C90B2F68AE9500F7DD58 /* Network */,
+				1130C90A2F68AE8F00F7DD58 /* Services */,
+				1130C9092F68AE8500F7DD58 /* Models */,
+				1130C9082F68AE7500F7DD58 /* Screens */,
+				1130C9072F68AD6200F7DD58 /* App */,
 				115DC4462F68851B006ABE04 /* PetitionsExplorer */,
 				115DC4452F68851B006ABE04 /* Products */,
 			);
@@ -132,6 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */,
+				1130C9052F6887D800F7DD58 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
