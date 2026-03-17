@@ -105,8 +105,6 @@
 		1130C9192F68B15E00F7DD58 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1130C91A2F68B22F00F7DD58 /* Petition.swift */,
-				1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +160,7 @@
 		1130C9302F69CC4D00F7DD58 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1130C9332F69D10E00F7DD58 /* Models */,
 				1130C9322F69CC5D00F7DD58 /* Services */,
 				1130C9312F69CC5300F7DD58 /* Network */,
 			);
@@ -180,6 +179,15 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1130C9332F69D10E00F7DD58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1130C91A2F68B22F00F7DD58 /* Petition.swift */,
+				1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		115DC43B2F68851B006ABE04 = {
