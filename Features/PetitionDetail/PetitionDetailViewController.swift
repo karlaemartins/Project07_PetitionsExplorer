@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-final class DetailViewController: UIViewController {
+final class PetitionDetailViewController: UIViewController {
     
     private var webView: WKWebView!
     
