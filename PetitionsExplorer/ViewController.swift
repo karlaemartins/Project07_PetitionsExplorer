@@ -21,5 +21,27 @@ final class ViewController: UIViewController {
         setupTableView()
         loadData()
     }
+    
+    private func setupTableView() {
+        view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func loadData() {
+        let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        
+        viewModel.loadPetitions(from: urlString)
+        
+        tableView.reloadData()
+    }
+    
 }
 
