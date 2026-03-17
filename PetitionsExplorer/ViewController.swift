@@ -33,6 +33,9 @@ final class ViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        tableView.dataSource = self
+
     }
     
     private func loadData() {
@@ -45,3 +48,21 @@ final class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           return viewModel.petitions.count
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           
+           let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+           
+           let petition = viewModel.petitions[indexPath.row]
+           
+           cell.textLabel?.text = petition.title
+           cell.detailTextLabel?.text = petition.body
+           
+           return cell
+       }
+}
