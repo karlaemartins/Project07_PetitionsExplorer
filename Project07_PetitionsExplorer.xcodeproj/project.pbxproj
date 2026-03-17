@@ -133,9 +133,57 @@
 			path = Formatting;
 			sourceTree = "<group>";
 		};
+		1130C92D2F69CC1100F7DD58 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1130C92F2F69CC3400F7DD58 /* PetitionDetail */,
+				1130C92E2F69CC2B00F7DD58 /* PetitionsList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1130C92E2F69CC2B00F7DD58 /* PetitionsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PetitionsList;
+			sourceTree = "<group>";
+		};
+		1130C92F2F69CC3400F7DD58 /* PetitionDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PetitionDetail;
+			sourceTree = "<group>";
+		};
+		1130C9302F69CC4D00F7DD58 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1130C9322F69CC5D00F7DD58 /* Services */,
+				1130C9312F69CC5300F7DD58 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1130C9312F69CC5300F7DD58 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1130C9322F69CC5D00F7DD58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		115DC43B2F68851B006ABE04 = {
 			isa = PBXGroup;
 			children = (
+				1130C9302F69CC4D00F7DD58 /* Core */,
+				1130C92D2F69CC1100F7DD58 /* Features */,
 				1130C92A2F69C2CC00F7DD58 /* Formatting */,
 				1130C9192F68B15E00F7DD58 /* Models */,
 				1130C90B2F68AE9500F7DD58 /* Network */,
