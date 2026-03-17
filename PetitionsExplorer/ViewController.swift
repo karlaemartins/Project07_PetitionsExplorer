@@ -42,9 +42,27 @@ final class ViewController: UIViewController {
     private func loadData() {
         let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         
-        viewModel.loadPetitions(from: urlString) { [weak self] in
-            self?.tableView.reloadData()
+        viewModel.loadPetitions(from: urlString) { [weak self] success in
+            guard let self = self else { return }
+            
+            if success {
+                self.tableView.reloadData()
+            } else {
+                self.showError()
+            }
         }
+    }
+    
+    private func showError() {
+        let alert = UIAlertController(
+            title: "Erro",
+            message: "Não foi possível carregar os dados. Verifique sua conexão.",
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(alert, animated: true)
     }
     
 }

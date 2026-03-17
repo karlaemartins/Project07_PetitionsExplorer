@@ -12,17 +12,21 @@ final class PetitionsViewModel {
     private let service = PetitionService()
     private(set) var petitions: [Petition] = []
     
-    func loadPetitions(from urlString: String, completion: @escaping () -> Void) {
+    func loadPetitions(from urlString: String, completion: @escaping (Bool) -> Void) {
         
         service.fetchPetitions(from: urlString) { [weak self] petitions in
             guard let self = self else { return }
             
             if let petitions = petitions {
                 self.petitions = petitions
-            }
-            
-            DispatchQueue.main.async {
-                completion()
+                
+                DispatchQueue.main.async {
+                    completion(true)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(false)
+                }
             }
         }
     }
