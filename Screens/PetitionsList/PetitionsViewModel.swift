@@ -11,6 +11,7 @@ final class PetitionsViewModel {
     
     private let service = PetitionService()
     private(set) var petitions: [Petition] = []
+    private var allPetitions: [Petition] = []
     
     func loadPetitions(from urlString: String, completion: @escaping (Bool) -> Void) {
         
@@ -20,6 +21,7 @@ final class PetitionsViewModel {
             switch result {
             case .success(let petitions):
                 self.petitions = petitions
+                self.allPetitions = petitions
                 
                 DispatchQueue.main.async {
                     completion(true)
@@ -30,6 +32,19 @@ final class PetitionsViewModel {
                     completion(false)
                 }
             }
+        }
+    }
+    
+    func filterPetitions(by keyword: String) {
+        
+        if keyword.isEmpty {
+            petitions = allPetitions
+            return
+        }
+        
+        petitions = allPetitions.filter {
+            $0.title.localizedCaseInsensitiveContains(keyword) ||
+            $0.body.localizedCaseInsensitiveContains(keyword)
         }
     }
 }
