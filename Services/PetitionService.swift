@@ -10,19 +10,35 @@ import Foundation
 
 final class PetitionService {
     
-    func fetchPetitions(from urlString: String) -> [Petition]? {
+    func fetchPetitions(from urlString: String, completion: @escaping ([Petition]?) -> Void) {
         
-        guard let url = URL(string: urlString) else { return nil }
-        
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        
-        let decoder = JSONDecoder()
-        
-        if let response = try? decoder.decode(PetitionsResponse.self, from: data) {
-            return response.results
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
         }
         
-        return nil
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                print("Error fetching data:", error)
+                completion(nil)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            if let response = try? decoder.decode(PetitionsResponse.self, from: data) {
+                completion(response.results)
+            } else {
+                completion(nil)
+            }
+        }
+        
+        task.resume()
     }
-
 }
