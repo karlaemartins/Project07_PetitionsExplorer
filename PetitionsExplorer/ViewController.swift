@@ -40,7 +40,7 @@ final class ViewController: UIViewController {
     }
     
     private func loadData() {
-        let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        let urlString = "https:www.hackingwithswift.com/samples/petitions-1.json"
         
         viewModel.loadPetitions(from: urlString) { [weak self] success in
             guard let self = self else { return }

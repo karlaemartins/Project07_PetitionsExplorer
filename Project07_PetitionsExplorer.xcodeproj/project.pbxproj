@@ -14,6 +14,8 @@
 		1130C91F2F68B54500F7DD58 /* PetitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C91E2F68B54500F7DD58 /* PetitionService.swift */; };
 		1130C9222F68B80B00F7DD58 /* PetitionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C9212F68B80B00F7DD58 /* PetitionsViewModel.swift */; };
 		1130C9252F699D1800F7DD58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C9242F699D1800F7DD58 /* DetailViewController.swift */; };
+		1130C9272F69AE7100F7DD58 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C9262F69AE7100F7DD58 /* NetworkService.swift */; };
+		1130C9292F69AEA600F7DD58 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C9282F69AEA600F7DD58 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1130C91E2F68B54500F7DD58 /* PetitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionService.swift; sourceTree = "<group>"; };
 		1130C9212F68B80B00F7DD58 /* PetitionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsViewModel.swift; sourceTree = "<group>"; };
 		1130C9242F699D1800F7DD58 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1130C9262F69AE7100F7DD58 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1130C9282F69AEA600F7DD58 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		115DC4442F68851B006ABE04 /* Project07_PetitionsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project07_PetitionsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,8 @@
 		1130C90B2F68AE9500F7DD58 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1130C9262F69AE7100F7DD58 /* NetworkService.swift */,
+				1130C9282F69AEA600F7DD58 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -215,10 +221,12 @@
 				1130C91D2F68B2BA00F7DD58 /* PetitionsResponse.swift in Sources */,
 				1130C91B2F68B22F00F7DD58 /* Petition.swift in Sources */,
 				1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */,
+				1130C9272F69AE7100F7DD58 /* NetworkService.swift in Sources */,
 				1130C9222F68B80B00F7DD58 /* PetitionsViewModel.swift in Sources */,
 				1130C9052F6887D800F7DD58 /* SceneDelegate.swift in Sources */,
 				1130C91F2F68B54500F7DD58 /* PetitionService.swift in Sources */,
 				1130C9252F699D1800F7DD58 /* DetailViewController.swift in Sources */,
+				1130C9292F69AEA600F7DD58 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
