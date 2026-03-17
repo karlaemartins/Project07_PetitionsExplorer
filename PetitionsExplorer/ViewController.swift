@@ -35,6 +35,7 @@ final class ViewController: UIViewController {
         ])
         
         tableView.dataSource = self
+        tableView.delegate = self
 
     }
     
@@ -65,4 +66,15 @@ extension ViewController: UITableViewDataSource {
            
            return cell
        }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = DetailViewController()
+        vc.petition = viewModel.petitions[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
