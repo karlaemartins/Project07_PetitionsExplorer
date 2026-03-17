@@ -23,6 +23,13 @@ final class ViewController: UIViewController {
         
         setupTableView()
         loadData()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Credits",
+            style: .plain,
+            target: self,
+            action: #selector(didTapCredits)
+        )
     }
     
     private func setupTableView() {
@@ -107,5 +114,20 @@ extension ViewController: UITableViewDelegate {
         vc.petition = viewModel.petitions[indexPath.row]
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+private extension ViewController {
+    
+    @objc func didTapCredits() {
+        let alert = UIAlertController(
+            title: "Credits",
+            message: "Data comes from the 'We The People' API of the White House.",
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(alert, animated: true)
     }
 }
