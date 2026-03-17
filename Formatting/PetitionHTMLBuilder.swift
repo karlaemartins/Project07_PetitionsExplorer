@@ -15,8 +15,19 @@ struct PetitionHTMLBuilder {
         <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-        body { font-size: 150%; }
-        h1 { font-size: 180%; }
+        body {
+            font-size: 150%;
+            font-family: -apple-system;
+            padding: 16px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 180%;
+            margin-bottom: 16px;
+        }
+        p {
+            line-height: 1.5;
+        }
         </style>
         </head>
         <body>

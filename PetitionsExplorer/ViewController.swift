@@ -24,14 +24,14 @@ final class ViewController: UIViewController {
         setupTableView()
         loadData()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: "Credits",
             style: .plain,
             target: self,
             action: #selector(didTapCredits)
         )
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Filter",
             style: .plain,
             target: self,
