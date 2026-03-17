@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C8F72F6887D800F7DD58 /* AppDelegate.swift */; };
 		1130C9052F6887D800F7DD58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */; };
+		1130C9162F68B0A600F7DD58 /* PetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C9112F68B0A600F7DD58 /* PetitionsViewController.swift */; };
 		1130C91B2F68B22F00F7DD58 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C91A2F68B22F00F7DD58 /* Petition.swift */; };
 		1130C91D2F68B2BA00F7DD58 /* PetitionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */; };
 		1130C91F2F68B54500F7DD58 /* PetitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130C91E2F68B54500F7DD58 /* PetitionService.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		1130C8F72F6887D800F7DD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1130C8FC2F6887D800F7DD58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1130C9112F68B0A600F7DD58 /* PetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsViewController.swift; sourceTree = "<group>"; };
 		1130C91A2F68B22F00F7DD58 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		1130C91C2F68B2BA00F7DD58 /* PetitionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsResponse.swift; sourceTree = "<group>"; };
 		1130C91E2F68B54500F7DD58 /* PetitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionService.swift; sourceTree = "<group>"; };
@@ -112,7 +114,6 @@
 		1130C9202F68B7E100F7DD58 /* PetitionsList */ = {
 			isa = PBXGroup;
 			children = (
-				1130C9212F68B80B00F7DD58 /* PetitionsViewModel.swift */,
 			);
 			path = PetitionsList;
 			sourceTree = "<group>";
@@ -145,6 +146,8 @@
 		1130C92E2F69CC2B00F7DD58 /* PetitionsList */ = {
 			isa = PBXGroup;
 			children = (
+				1130C9212F68B80B00F7DD58 /* PetitionsViewModel.swift */,
+				1130C9112F68B0A600F7DD58 /* PetitionsViewController.swift */,
 			);
 			path = PetitionsList;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1130C91D2F68B2BA00F7DD58 /* PetitionsResponse.swift in Sources */,
+				1130C9162F68B0A600F7DD58 /* PetitionsViewController.swift in Sources */,
 				1130C91B2F68B22F00F7DD58 /* Petition.swift in Sources */,
 				1130C9042F6887D800F7DD58 /* AppDelegate.swift in Sources */,
 				1130C9272F69AE7100F7DD58 /* NetworkService.swift in Sources */,
