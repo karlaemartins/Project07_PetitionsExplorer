@@ -17,6 +17,9 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
+        title = "Petitions"
+        
+        navigationItem.backButtonTitle = ""
         
         setupTableView()
         loadData()
@@ -26,6 +29,8 @@ final class ViewController: UIViewController {
         view.addSubview(tableView)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = 100
+        //tableView.separatorStyle = .singleLine
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -76,12 +81,20 @@ extension ViewController: UITableViewDataSource {
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            
            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-           
+
            let petition = viewModel.petitions[indexPath.row]
-           
+
            cell.textLabel?.text = petition.title
-           cell.detailTextLabel?.text = petition.body
+           cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
            
+           cell.textLabel?.numberOfLines = 2
+
+           cell.detailTextLabel?.text = petition.body
+           cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 14)
+           cell.detailTextLabel?.textColor = .secondaryLabel
+
+           cell.detailTextLabel?.numberOfLines = 2
+
            return cell
        }
 }

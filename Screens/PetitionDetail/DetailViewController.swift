@@ -32,10 +32,14 @@ final class DetailViewController: UIViewController {
         <html>
         <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style> body { font-size: 150%; } </style>
+        <style>
+        body { font-size: 150%; }
+        h1 { font-size: 180%; }
+        </style>
         </head>
         <body>
-        \(petition.body)
+        <h1>\(petition.title)</h1>
+        <p>\(petition.body)</p>
         </body>
         </html>
         """
