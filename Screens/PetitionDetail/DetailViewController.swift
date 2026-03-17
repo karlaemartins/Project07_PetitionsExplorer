@@ -28,21 +28,7 @@ final class DetailViewController: UIViewController {
     private func loadContent() {
         guard let petition = petition else { return }
         
-        let html = """
-        <html>
-        <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-        body { font-size: 150%; }
-        h1 { font-size: 180%; }
-        </style>
-        </head>
-        <body>
-        <h1>\(petition.title)</h1>
-        <p>\(petition.body)</p>
-        </body>
-        </html>
-        """
+        let html = PetitionHTMLBuilder.makeHTML(for: petition)
         
         webView.loadHTMLString(html, baseURL: nil)
     }
