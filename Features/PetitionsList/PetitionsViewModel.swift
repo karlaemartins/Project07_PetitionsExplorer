@@ -22,15 +22,10 @@ final class PetitionsViewModel {
             case .success(let petitions):
                 self.petitions = petitions
                 self.allPetitions = petitions
-                
-                DispatchQueue.main.async {
-                    completion(true)
-                }
+                completion(true)
                 
             case .failure:
-                DispatchQueue.main.async {
-                    completion(false)
-                }
+                completion(false)
             }
         }
     }

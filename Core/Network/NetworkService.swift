@@ -19,20 +19,28 @@ final class NetworkService {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let error = error {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
                 return
             }
             
             guard let data = data else {
-                completion(.failure(NetworkError.noData))
+                DispatchQueue.main.async {
+                    completion(.failure(NetworkError.noData))
+                }
                 return
             }
             
             do {
                 let decoded = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(decoded))
+                DispatchQueue.main.async {
+                    completion(.success(decoded))
+                }
             } catch {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
             }
         }
         
